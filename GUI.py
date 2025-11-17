@@ -44,8 +44,8 @@ class CurseCleanerGUI:
 
         title_label = tk.Label(
             header_frame,
-            text="Curse Cleaner",
-            font=("Arial", 28, "bold"),
+            text="CounterCurse",
+            font=("Gorgia", 28, "bold"),
             bg=self.accent_color,
             fg="white"
         )
@@ -60,7 +60,7 @@ class CurseCleanerGUI:
         input_label = tk.Label(
             content_frame,
             text="Input Video",
-            font=("Arial", 12, "bold"),
+            font=("Gorgia", 12, "bold"),
             bg=self.bg_color,
             fg="#333"
         )
@@ -72,7 +72,7 @@ class CurseCleanerGUI:
         self.input_entry = tk.Entry(
             input_frame,
             textvariable=self.input_path,
-            font=("Arial", 10),
+            font=("Gorgia", 10),
             relief="solid",
             bd=1
         )
@@ -84,7 +84,7 @@ class CurseCleanerGUI:
             command=self.browse_input,
             bg=self.button_color,
             fg="white",
-            font=("Arial", 10, "bold"),
+            font=("Gorgia", 10, "bold"),
             relief="flat",
             cursor="hand2",
             padx=20,
@@ -97,7 +97,7 @@ class CurseCleanerGUI:
         output_label = tk.Label(
             content_frame,
             text="Output Video Name",
-            font=("Arial", 12, "bold"),
+            font=("Gorgia", 12, "bold"),
             bg=self.bg_color,
             fg="#333"
         )
@@ -109,7 +109,7 @@ class CurseCleanerGUI:
         self.output_entry = tk.Entry(
             output_frame,
             textvariable=self.output_name,
-            font=("Arial", 10),
+            font=("Gorgia", 10),
             relief="solid",
             bd=1
         )
@@ -118,7 +118,7 @@ class CurseCleanerGUI:
         ext_label = tk.Label(
             output_frame,
             text=".mp4",
-            font=("Arial", 10),
+            font=("Gorgia", 10),
             bg=self.bg_color,
             fg="#666"
         )
@@ -128,7 +128,7 @@ class CurseCleanerGUI:
         level_label = tk.Label(
             content_frame,
             text="Censoring Level",
-            font=("Arial", 12, "bold"),
+            font=("Gorgia", 12, "bold"),
             bg=self.bg_color,
             fg="#333"
         )
@@ -152,7 +152,7 @@ class CurseCleanerGUI:
                 text=text,
                 variable=self.profanity_level,
                 value=value,
-                font=("Arial", 10, "bold"),
+                font=("Gorgia", 10, "bold"),
                 bg=self.bg_color,
                 fg="#333",
                 selectcolor=self.bg_color,
@@ -164,7 +164,7 @@ class CurseCleanerGUI:
             desc_label = tk.Label(
                 rb_frame,
                 text=desc,
-                font=("Arial", 8),
+                font=("Gorgia", 8),
                 bg=self.bg_color,
                 fg="#666"
             )
@@ -174,7 +174,7 @@ class CurseCleanerGUI:
         passes_label = tk.Label(
             content_frame,
             text="Number of Passes",
-            font=("Arial", 12, "bold"),
+            font=("Gorgia", 12, "bold"),
             bg=self.bg_color,
             fg="#333"
         )
@@ -188,7 +188,7 @@ class CurseCleanerGUI:
             from_=1,
             to=5,
             textvariable=self.num_passes,
-            font=("Arial", 10),
+            font=("Gorgia", 10),
             width=10,
             relief="solid",
             bd=1
@@ -198,7 +198,7 @@ class CurseCleanerGUI:
         passes_info = tk.Label(
             passes_frame,
             text="Multiple passes can catch words missed in the first pass",
-            font=("Arial", 9),
+            font=("Gorgia", 9),
             bg=self.bg_color,
             fg="#666"
         )
@@ -211,7 +211,7 @@ class CurseCleanerGUI:
         self.progress_label = tk.Label(
             self.progress_frame,
             text="",
-            font=("Arial", 9),
+            font=("Gorgia", 9),
             bg=self.bg_color,
             fg="#666"
         )
@@ -230,7 +230,7 @@ class CurseCleanerGUI:
             command=self.start_processing,
             bg="#5cff67",
             fg="white",
-            font=("Arial", 13, "bold"),
+            font=("Gorgia", 13, "bold"),
             relief="flat",
             cursor="hand2",
             padx=40,
