@@ -152,7 +152,7 @@ class CurseCleanerGUI:
                 text=text,
                 variable=self.profanity_level,
                 value=value,
-                font=("Gorgi", 10, "bold"),
+                font=("Gorgia", 10, "bold"),
                 bg=self.bg_color,
                 fg="#333",
                 selectcolor=self.bg_color,
