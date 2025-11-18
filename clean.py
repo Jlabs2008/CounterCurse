@@ -44,7 +44,7 @@ class ProfanityFilter:
         print("Transcribing audio...")
         if not self.whisper_model:
             self.load_whisper_model()
-
+        # Timestamps must be set to true, otherwise CENSORSHIP will not work.
         result = self.whisper_model.transcribe(audio_path, word_timestamps=True)
         return result
 
