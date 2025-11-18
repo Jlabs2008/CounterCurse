@@ -260,7 +260,7 @@ class CurseCleanerGUI:
         )
         if filename:
             self.input_path.set(filename)
-            # Auto-fill output name based on input
+            # Autofill output name based on input
             if not self.output_name.get():
                 base_name = Path(filename).stem
                 self.output_name.set(f"{base_name}_censored")
