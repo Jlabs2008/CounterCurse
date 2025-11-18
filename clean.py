@@ -8,14 +8,22 @@ import json
 
 class ProfanityFilter:
     def __init__(self):
-        self.profanity_lists = {
-            "minor": ["bitches", "bitch", "fuck", "fucking", "fuckin", "motherfucker", "fucker", "fuckers", "fuckoff", "fucks", "fucksake", "fucked"],
-            "moderate": ["shit", "bullshit", "shitting", "ass", "asshole", "assholes", "bitch", "bitches", "fuck", "fuckin", "fuckoff", "fucking", "fucker", "fuckers", "fucksake", "motherfucker", "bastard", "fucked", "fucks", "cunt"],
-            "strict": ["shit", "bullshit", "shitting", "ass", "assholes", "asshole", "bitches", "bitch", "piss", "fuck", "fuckoff", "fuckin", "fucking", "fucker", "fucksake", "fuckers", "motherfucker", "fucked", "fucks", "bastard", "damn",
-                       "hell", "goddamn", "dick", "prick", "slut", "hoe", "whore", "cunt", "cunts", "pussy", "cum", "god", "dickrod"]
-        }
+        self.profanity_lists = self.load_profanity_lists()
         self.whisper_model = None
- 
+
+    def load_profanity_lists(self):
+        self.profanity_lists = {}
+        levels = ["minor", "moderate", "strict"]
+
+        for level in levels:
+            try:
+                with open(f"Curselist/{level}.txt", "r") as f:
+                    self.profanity_lists[level] = [line.strip() for line in f if line.strip()]
+            except FileNotFoundError:
+                print(f"Error Code 7: {level}.txt not found")
+                self.profanity_lists[level] = []
+
+        return self.profanity_lists
     def load_whisper_model(self, model_size="base"):
         """Load Whisper model for speech recognition"""
         print(f"Loading Whisper model ({model_size})...")

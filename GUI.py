@@ -19,8 +19,8 @@ class CurseCleanerGUI:
         # Set color scheme
         self.bg_color = "#f0f0f0"
         self.accent_color = "#4a90e2"
-        self.button_color = "#5a9fd4"
-        self.button_hover = "#4a8fc4"
+        self.button_color = "#5cff67"
+        self.button_hover = "#99ffa0"
 
         self.root.configure(bg=self.bg_color)
 
@@ -307,7 +307,6 @@ class CurseCleanerGUI:
         thread.start()
 
     def process_video(self):
-        """Process the video (runs in separate thread)"""
         try:
             input_video = self.input_path.get()
             output_video = self.output_name.get() + ".mp4"
