@@ -20,7 +20,7 @@ class ProfanityFilter:
                 with open(f"Curselist/{level}.txt", "r") as f:
                     self.profanity_lists[level] = [line.strip() for line in f if line.strip()]
             except FileNotFoundError:
-                print(f"Error Code 7: {level}.txt not found")
+                print(f"Error Code: {level}.txt not found")
                 self.profanity_lists[level] = []
 
         return self.profanity_lists
