@@ -8,8 +8,10 @@ ANYONE! I primarily use this for video editing, and that's what I initally desig
 CPU:
 * Intel i5 10th Gen
 * AMD Ryzen 5 3600
+
 Ram: 
 * 16 Gigs
+
 GPU:
 * NVIDIA GTX 1080
 * AMD RX 6600*
